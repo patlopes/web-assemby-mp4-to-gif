@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img :src="require('./assets/stack.png')" alt="stack" class="stack" />
+  <Mp4ToGif />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Mp4ToGif from "./components/Mp4ToGif.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Mp4ToGif,
+  },
+};
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+  background: #dbdeff;
+}
+
+.stack {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
